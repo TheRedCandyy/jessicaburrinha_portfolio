@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="./img/logo_with_background.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="navigation.js"></script>
+    <script type="module" crossorigin src="./assets/index.b1995cd6.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.50b6404e.js">
+    <link rel="stylesheet" href="./assets/index.ed866659.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Jéssica Burrinha</title>
+    <script>
+        setTimeout(function() {
+            $('#loading_screen').removeClass('d-flex');
+            $('#loading_screen').addClass('d-none');
+            $('#home').removeClass('d-none');
+            $('#home').addClass('d-block');
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div id="loading_screen" class="d-flex justify-content-center align-items-center bg-dark vh-100 z-50">
+        <div class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light mx-2 delay-animation-1" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light delay-animation-2" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div id="home" class="vh-100 d-none">
+        <div class="landing_page_background">
+            <div class="container vh-100">
+              <div class="row vh-100 align-items-center">
+                <div class="col-12 text-center text-light">
+                    <img src="./img/logo_white.png" alt="Logo">
+                    <h1 class="display-1"><span class='fw-extra-light px-md-3'>Jéssica Burrinha</span></h1>
+                    <!--<p class="display-6"><span class=' px-md-3'>Artist based in Portugal</span></p>-->
+                </div>
+              </div>
+            </div>
+            <a href="#aboutme"><div class="scroller" id="scroller" onclick="goto('aboutme', 'home')">
+                <section class="bg-white">
+                    <span class="scroll__icon">
+                    <span class="scroll-icon__dot"></span>
+                    </span>
+                </section>
+            </div></a>
+        </div>
+    </div>
+    <div id="scroll-horizontal" class="d-none" style="width:300%">
+        <!-- ABOUT ME -->
+        <div id="aboutme" class="d-block vw-100 overflow-scroll">
+            <div class="container-fluid vh-100">
+                <div class="desktop-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <div class="d-flex">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'aboutme')">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#portfolio" onclick="goto('portfolio', 'aboutme')">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contacts" onclick="goto('contacts', 'aboutme')">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="mobile-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <form class="d-flex">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'aboutme', 1)">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#portfolio" onclick="goto('portfolio', 'aboutme', 1)">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contacts" onclick="goto('contacts', 'aboutme', 1)">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="container">
+                    <div class="row float-md-end mt-3 d-inline-block">
+                        <div class="col-12">
+                            <a class="me-3 text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a>
+                            <br class="d-block d-md-none">
+                            <a class="me-3 text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <img class="img-fluid" src="./img/aboutme.png" alt="Me">
+                        </div>
+                        <div class="col-lg-6 col-12 align-self-center">
+                            <h2>Lorem ipsum</h2>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis non architecto obcaecati expedita suscipit rerum, sequi laborum nihil nostrum, ducimus quam at, repellat delectus repudiandae qui? Libero voluptatem rem atque!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO -->
+        <div class="d-block vw-100">
+            <div id="portfolio"></div>
+            <div class="container-fluid vh-100 p-0">
+                <div class="desktop-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <div class="d-flex">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'portfolio')">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#aboutme" onclick="goto('aboutme', 'portfolio')">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contacts" onclick="goto('contacts', 'portfolio')">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="mobile-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <form class="d-flex">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'portfolio, 1')">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#aboutme" onclick="goto('aboutme', 'portfolio', 1)">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contacts" onclick="goto('contacts', 'portfolio', 1)">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="container-fluid p-0">
+                    <div class="d-flex align-items-center vh-100">
+                        <div class="carousel-slider mb-5 mx-md-5 mx-2">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- elements with  "carousel-slider-animate-opacity" class will have animated opacity -->
+                                    <a onclick="goto('cinetica')">
+                                        <div class="carousel-slider-animate-opacity">
+                                            <img src="./img/cinetica/cover.jpg" alt="">
+                                            <div class="slide-content">
+                                                <h2>Cinética</h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('decadencia')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/decadencia/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Decadência</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('despojamento')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/despojamento/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Despojamento</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('in_materiae_veritas')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/in_materiae_veritas/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>In Materiae Veritas</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('missao_cumprida')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/missao_cumprida/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Missão Cumprida</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('recomeco')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/recomeco/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Recomeço</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('sopro_de_vida')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/sopro_de_vida/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Sopro de Vida</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('tao_longe')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/tao_longe/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Tão Longe</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="goto('terra_feita_de_tempo')">
+                                        <div class="carousel-slider-animate-opacity">
+                                        <img src="./img/terra_feita_de_tempo/cover.jpg" alt="">
+                                        <div class="slide-content">
+                                            <h2>Terra feita de tempo</h2>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div id="cinetica" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2 my-5">Cinética</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <img src="./img/cinetica/cover.jpg" class="d-block img-fluid" alt="...">
+                                </div>
+                                <div class="col-12 col-md-8 d-flex align-items-center mt-5 mt-md-0">
+                                    A vida no Barreiro era regulada pelas sirenes da CUF, às sete e cinquenta e cinco da manhã, toda agente tinha de estar na 
+                                    fábrica a trabalhar. Parecia uma cidade, dentro de uma vila. Havia uma imensidão de homens e mulheres, máquinas, barulho, pó.
+                                    A violência da poluição química foi tanta que atravessou a história contemporânea do Barreiro e foram os trabalhadores que 
+                                    sofreram as maiores consequências.
+                                </div>
+                            </div>
+                            <hr class="my-5 d-block d-md-none">
+                            <div class="row mt-5">
+                                <div class="col-12 col-md-8 d-flex align-items-center">
+                                        O ritmo acelerado das máquinas em movimento e as deslocações massivas dos trabalhadores deixaram uma marca 
+                                        profunda naquele que foi o maior aglomerado industrial do país. Uma história vincada, mas que, ainda assim, 
+                                        pode ser repensada em novos horizontes numa busca por um caminho mais ecológico, numa saída de emergência obrigatória.
+                                </div>
+                                <div class="col-12 col-md-4 d-flex justify-content-end mt-5 mt-md-0">
+                                    <img src="./img/cinetica/C01.jpg" class="d-block img-fluid" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center fixed-bottom">
+                            <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                        </div>
+                        <!--
+
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="cineticaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/cinetica/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/cinetica/C01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/cinetica/C02.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/cinetica/C03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/cinetica/C05.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/cinetica/C06.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#cineticaCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#cineticaCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                    <div id="decadencia" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Decadência</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                A vida no Barreiro era regulada pelas sirenes da CUF, às sete e cinquenta e cinco da manhã, toda agente tinha de estar
+                                na fábrica a trabalhar. Parecia uma cidade, dentro de uma vila. Havia uma imensidão de homens e mulheres, máquinas, 
+                                barulho, pó. A violência da poluição química foi tanta que atravessou a história contemporânea do Barreiro e foram 
+                                os trabalhadores que sofreram as maiores consequências. O ritmo acelerado das máquinas em movimento e as deslocações 
+                                massivas dos trabalhadores deixaram uma marca profunda naquele que foi o maior aglomerado industrial do país. 
+                                Uma história vincada, mas que, ainda assim, pode ser repensada em novos horizontes numa busca por um caminho 
+                                mais ecológico, numa saída de emergência obrigatória.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="decadenciaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#decadenciaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#decadenciaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/decadencia/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/decadencia/D01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#decadenciaCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#decadenciaCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="despojamento" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Despojamento</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                Com a constante degradação e envelhecimento do Convento da Madre Deus da Verderena, as memórias e o passado do que 
+                                foi outrora um Convento de Monges Arrábidos Franciscanos, acaba por ficar no esquecimento de quem o vê hoje em dia. 
+                                O primeiro impacto que tive com o Convento foi quase o total abandono do restauro das suas paredes, tetos e 
+                                estruturas que suportam este austero Convento. Sabemos que os materiais que eram utilizados por esta ordem de 
+                                monges, deviam ser extremamente pobres, sem quaisquer elementos ornamentais, de modo a refletir a sua simplicidade 
+                                e humildade perante a vida. Por isso mesmo, a sua resistência e durabilidade não era muita. O que eu quero mostrar 
+                                com o meu trabalho é quase como um recordar um tempo em que haviam quintas cheias de vinhas, monges que viviam com 
+                                o mínimo que tinham, despojados de tudo, uma vida da terra, simples e que na verdade essa maneira tão económica e 
+                                precária de viver era a maneira mais pura na época.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="despojamentoCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#despojamentoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#despojamentoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#despojamentoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#despojamentoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/despojamento/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/despojamento/De01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/despojamento/De03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/despojamento/De04.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#despojamentoCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#despojamentoCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="in_materiae_veritas" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">In Materiae Veritas</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                É mais fácil ler uma pedra ou ler palavras? Em que língua fala hoje o Douro, e para quem? Estas e outras interrogações 
+                                serviram de mote para a criação deste projeto a dois, que junta uma escultora do Barreiro com um jovem escritor do 
+                                Porto. A língua junta-se ao fruto, o pé crava no solo, antecipando as vontades que se suspeita que o Homem sempre 
+                                teve. Desde a Antiguidade Clássica, com a representação de Baco na Grécia e de Dionísio em Roma, que o vinho encarnou 
+                                um papel principal na socialização entre homens e culturas. Com a expressão “In Vino Veritas”, o álcool sempre assumiu 
+                                um certo significado de clarividência, levando o Homem a definir melhor quais os seus pensamentos e desejos ocultos. 
+                                Esta procura pela exactidão da realidade tem uma relação muito próxima com o acto de criação artística. A depuração do 
+                                objecto pede por vezes uma capacidade de sintetização que só com abstracção a conseguimos alcançar. Ao definir o 
+                                conceito de beleza, Platão descreve-o como “o esplendor da verdade”. A “verdade”, como meta final do trabalho artístico, 
+                                é algo bastante presente nos trabalhos de ambos os autores expostos. Para ser verdadeira, tem a arte o “doce paradoxo” 
+                                de nunca poder ser feita por encomenda, mas, ao mesmo tempo, dificilmente existir sem encomendas que a patrocinem. Se 
+                                não for fiel ao seu autor, de nada servirá. Porém, mesmo com o seu valor intrínseco, se não tiver público para a 
+                                interpretar dificilmente mudará o mundo. No trabalho apresentado, a “terra” (matéria=materiae) tem um papel fundamental. 
+                                Numa sociedade cada vez mais desligada do planeta, do toque e do nosso lado animal, urge o ditame para a verdade que a 
+                                terra nos transmite. Esconde-se por entre rochas, areias, pó de cascalho, plantas, raízes e detritos que são pelo ser 
+                                humano compactados. É a história estratificada, estática e silenciosa. Uma linha do tempo que foi esquecida, mas que 
+                                hoje constitui aquilo que vemos, tocamos e sentimos. Compacta-se a história e toda a sua composição. Cada estrato 
+                                simboliza um passado que foi construído e modificado pelo Homem. Até então, a Terra já existia bem antes de nós, pura 
+                                e intacta. Mais do que aquilo que pisamos todos os dias, é onde nos semeamos quando julgamos partir. É a semente da vida. 
+                                Afinal, quando foi a última vez que os nossos dedos dos pés tocaram em terra? Que se descalcem os preconceitos, e que nos 
+                                lembremos de quem éramos antes de sermos o que somos. Compacta-se a história e toda a sua composição. Cada estrato 
+                                simboliza um passado que foi construído e modificado pelo Homem. Até então, a Terra já existia bem antes de nós, pura e 
+                                intacta. Mais do que aquilo que pisamos todos os dias, é onde nos semeamos quando julgamos partir. É a semente da vida. 
+                                Afinal, quando foi a última vez que os nossos dedos dos pés tocaram em terra? Que se descalcem os preconceitos, e que 
+                                nos lembremos de quem éramos antes de sermos o que somos.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="in_materiae_veritasCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/in_materiae_veritas/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/in_materiae_veritas/Mi01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/in_materiae_veritas/Mi03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="missao_cumprida" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Missão Cumprida</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                A Terra é feita de tempo. Na terra escondem-se histórias estratificadas. Estática e silenciosa, a Terra guarda 
+                                vestígios do que outrora foram momentos de grande angústia, desespero e dor. Cada extrato relata-nos uma linha do 
+                                tempo que foi esquecida, mas que constitui o que perdurou, o que sabemos e o que ela nos conta. Todos os dias pelo 
+                                humano é compactada. Todos os dias pelo humano é esculpida. Por entre a terra, rochas e detritos, existe a história 
+                                de muitos homens que lutaram pela sua Pátria, arrancados das suas terras para o desconhecido, lutando por uma causa 
+                                que ninguém lhes explicou e contra um inimigo cujas ofensas não compreendem. Por muitos anos tidas como perdidas 
+                                nas lacunas do tempo, as cartas que se escreviam acabavam por ser censuradas, arquivadas ou muitas vezes perdidas 
+                                nos campos de batalha. Assim como a esperança e a alegria de muitos homens que ali ficaram para a eternidade, restou 
+                                a história que cada herói deixou por entre as linhas do tempo, muitos tentaram cumprir a missão, mas poucos trouxeram 
+                                a missão cumprida. Hoje, fazem parte das memórias e história da nossa humanidade.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="missao_cumpridaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/missao_cumprida/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/missao_cumprida/Mc01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/missao_cumprida/Mc03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recomeco" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Recomeço</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                A Humanidade cada vez mais destrói aquilo que lhe é dado gratuitamente. A escultura Recomeço, é uma escultura que 
+                                nos remete para a degradação e destruição do que o Homem construiu e deixou ao abandono. Algo começa a crescer no 
+                                meio desse caos. A Natureza simplesmente cresce e adapta-se, mostrando que também é possível sobreviver à sujidade 
+                                e destruição permanente. Recomeçar é entender que ainda existe esperança numa mudança no tempo e espaço onde 
+                                vivemos hoje.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="recomecoCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#recomecoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#recomecoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/recomeco/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/recomeco/R02.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#recomecoCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#recomecoCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sopro_de_vida" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Sopro de vida</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                A ideia de trazer do exterior para o interior, o vento que trás a vida, e a vida que começa a espalhar-se pelo 
+                                palácio, foi o meu principal ponto de interesse. Na época do Marquês o Palácio estava completamente virado para 
+                                o jardim, com todas as janelas viradas para este espaço puro, romântico e belo. À época havia um interesse muito 
+                                grande em representar a Natureza e em interagir com ela. Trabalhei o vento (Zéfiro) conseguindo trazer para dentro 
+                                do Palácio a Natureza (Flora) através de folhas que dão vida ao espaço, relacionando o interior e exterior e a 
+                                história que era contada nos tetos da sala que eu escolhi. O mito de Zéfiro e Flora reflete o equilíbrio e a 
+                                natureza. O vento suave leva o pólen das flores, fazendo com que fecunde e renasça outra vegetação.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="sopro_de_vidaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/sopro_de_vida/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/sopro_de_vida/S01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/sopro_de_vida/S03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tao_longe" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Tão Longe</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                As cartas são as marcas que permanecem no tempo, que perduram deixando uma saudade e uma melancolia que não 
+                                desaparece, apenas se desvanece. O que resta são os sentimentos deixados em cada letra escrita num papel 
+                                amarelecido pelo tempo, que cheira a um passado distante. Voltar atrás, como se a memória dessas letras de uma 
+                                tinta sem cor, se unissem em palavras e criassem memórias a preto e branco, que nos recordam a emoção de um tempo 
+                                que não passou.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="tao_longeCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#tao_longeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#tao_longeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#tao_longeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/tao_longe/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/tao_longe/T01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/tao_longe/T03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#tao_longeCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#tao_longeCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="terra_feita_de_tempo" class="vh-100 d-none overflow-y">
+                        <h1 class="text-center pt-2">Terra Feita de Tempo</h1>
+                        <div class="container text-center my-5">
+                            <p>
+                                No nosso planeta Terra estão estratificados antepassados com milhões de anos e, antes deles, vestígios de eras 
+                                sem homens e mesmo até sem seres vivos. Acumulados e conservados pelo tempo, estes vestígios revelam-se na 
+                                disposição relativa das camadas mais ou menos espessas pelo desgaste lento das rochas que as compõem. 
+                                A representação estratigráfica numa coluna geológica, revela-nos a época em que os humanos tomaram controle 
+                                do planeta e começaram a interferir tanto na Natureza, que começaram a pôr em risco a própria sobrevivência 
+                                da humanidade.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-8 col-md-10">
+                                <div id="terra_feita_de_tempoCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="./img/terra_feita_de_tempo/cover.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/terra_feita_de_tempo/Tf01.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/terra_feita_de_tempo/Tf03.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/terra_feita_de_tempo/Tf04.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#terra_feita_de_tempoCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <a onclick="goto('portfolio_reset')" style="cursor: pointer;"><span class="align-top"> Back to top</span> <i style="font-size:1.5rem" class="fas fa-arrow-alt-circle-up"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTACTS -->
+        <div id="contacts" class="d-block vw-100 overflow-scroll">
+            <div class="container-fluid vh-100">
+                <div class="desktop-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <div class="d-flex">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'contacts')">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#aboutme" onclick="goto('aboutme', 'contacts')">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#portfolio" onclick="goto('portfolio', 'contacts')">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="mobile-only">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img src="./img/logo_black.png" alt="Logo" width="50" height="50"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <form class="d-flex">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#home" onclick="goto('home', 'contacts', 1)">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#aboutme" onclick="goto('aboutme', 'contacts', 1)">About Me</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#portfolio" onclick="goto('portfolio', 'contacts', 1)">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="container mb-md-5">
+                    <div class="row align-content-end mt-5">
+                        <div class="col">
+                            <h2 class="mb-5">Contacts</h2>
+                            <div class="social">
+                                <p></p><i class="fab fa-twitter rounded-circle"></i><a href="https://www.twitter.com">my_twitter</a>
+                                <p></p><i class="fab fa-instagram rounded-circle"></i><a href="https://www.instagram.com">my_instagram</a>
+                                <p></p><i class="fab fa-facebook-square rounded-circle"></i><a href="https://www.facebook.com">my_facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-5">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="mb-5">Get in touch!</h2>
+                            <form id="contact_form" method="POST" action="send_email.php" role="form">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="email">@</span>
+                                    <input id="form_email" type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="email" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input id="form_subject" type="text" class="form-control" placeholder="Subject" aria-label="Subject" aria-describedby="subject" required>
+                                </div>
+                                <div class="input-group">
+                                    <textarea id="form_message" class="form-control" aria-label="Message" placeholder="The message" required></textarea>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary" type="submit">Send email</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const email_tooltip = document.getElementById('email_tooltip');
+
+    new bootstrap.Tooltip(email_tooltip);
+
+
+    
+
+    //------- Send email --------
+    //function submitContactForm() {
+        /*var name = $('#form_name').val();
+        var email = $('#form_email').val();
+        var phone = $('#form_phone').val();
+        var message =$('#form_message').val();*/
+
+        //this is the html template. You can also do it as used above. But is much simpler done as below
+        /*
+        var htmlMessage = 'Contact form<br/>' +
+        'Name: '+$('#form_subject').val()+'<br/>'+
+        'EMail: '+$('#form_email').val()+'<br/>'+
+        'Message:<br/>'+
+        $('#form_message').val();
+
+        //submit the form using ajax
+        $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send",
+        data: {
+        "key": f64006ed1fe7116ba304b514eed473dd-us14,
+        "message": {
+            "from_email": 'alexandre.tavares@bnt.pt',
+            "to": [
+            {
+                "email": 'alexandre.tavares@bnt.pt',
+                "name": 'Alexandre Tavares',
+                "type": 'to'
+            }
+            ],
+            "subject": $('#form_subject').val(),
+            "html": htmlMessage
+        }
+        },
+        success: function(response){
+            alert(response);
+        },
+        error: function(response){
+            alert(response);
+        }
+        });
+
+        return false;
+    }
+    /*
+    function send_email(){
+        var email = document.getElementById("form_email").value;
+        var subject = document.getElementById("form_subject").value;
+        var message = document.getElementById("form_message").innerHTML;
+
+        var mandrill = require('node-mandrill')('f64006ed1fe7116ba304b514eed473dd-us14');
+    
+        
+        mandrill('/messages/send', {
+            message: {
+                to: [{email: 'alexandre.tavares@bnt.pt', name: 'Alexandre Tavares'}],
+                from_email: email,
+                subject: subject,
+                text: message
+            }
+        }, function(error, response)
+        {
+            //uh oh, there was an error
+            if (error) console.log( JSON.stringify(error) );
+    
+            //everything's good, lets see what mandrill said
+            else console.log(response);
+        });
+    }*/
+</script>
+</html>
