@@ -17,6 +17,7 @@ function goto(whereto, from, mobile) {
     var aboutme = document.getElementById("aboutme");
     var horizontal = document.getElementById("scroll-horizontal");
     var home = document.getElementById("home");
+    var documents = document.getElementById("documents");
     var footer = document.getElementById("footer");
     
     if (mobile) {
@@ -69,6 +70,17 @@ function goto(whereto, from, mobile) {
             }else{
                 document.getElementById(from).classList.add("animate__animated", "animate__backOutRight");
                 contacts.classList.add("animate__animated", "animate__backInRight");
+            }
+            break;
+        case 'documents':
+            if (from == "home") {
+                horizontal.classList.add("d-flex");
+                horizontal.classList.remove("d-none");
+                document.getElementById(from).classList.add("animate__animated", "animate__backOutUp");
+                documents.classList.add("animate__animated", "animate__backInUp");
+            }else{
+                document.getElementById(from).classList.add("animate__animated", "animate__backOutRight");
+                documents.classList.add("animate__animated", "animate__backInRight");
             }
             break;
         case 'portfolio_reset':
