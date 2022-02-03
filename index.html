@@ -112,7 +112,7 @@
                                             <a class="nav-link" href="#portfolio" onclick="goto('portfolio', 'aboutme', 1)">Portfolio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#documents" onclick="goto('documents', 'aboutme')">Documents</a>
+                                            <a class="nav-link" href="#documents" onclick="goto('documents', 'aboutme', 1)">Documents</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#contacts" onclick="goto('contacts', 'aboutme', 1)">Contacts</a>
@@ -124,14 +124,6 @@
                     </nav>
                 </div>
                 <div class="container h-75">
-                    <div class="row float-md-end mt-3 d-inline-block">
-                        <div class="col-12">
-                            <a class="me-3 text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a>
-                            <br class="d-block d-md-none">
-                            <a class="me-3 text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
                     <div class="row">
                         <div class="col-lg-6 col-12">
                             <img class="img-fluid" src="./img/aboutme.png" alt="Me">
@@ -835,8 +827,39 @@
                         </div>
                     </nav>
                 </div>
-                <div class="container mb-xl-5">
-                    <h1>Documents</h1>
+                <div class="container vh-100 mb-xl-5">
+                    <div class="row mt-3">
+                        <div class="col-12 d-lg-none d-block">
+                            <h2>Documents</h2>
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none" href="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none" href="./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf" target="_blank"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 d-lg-block d-none">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/ESCULTURA-JESSICA-BURRINHA.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>Portfolio in PDF</a></li>
+                                <li class="list-group-item" onclick="to_preview('./pdf/A-ONTOLOGIA-DA-TERRA-2021.pdf')"><a class="text-decoration-none"><i class="fas fa-file-pdf"></i>"A ONTOLOGIA DA TERRA" Exhibition</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 d-lg-block d-none border rounded">
+                            <object id="pdf_viewer" data="./pdf/ESCULTURA-JESSICA-BURRINHA.pdf" type="application/pdf" style="height: 80vh; width:100%">
+                                <div>No online PDF viewer installed</div>
+                            </object>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </div>
@@ -947,8 +970,9 @@
 
     new bootstrap.Tooltip(email_tooltip);
 
-
-    
+    function to_preview(url){
+        $("#pdf_viewer").prop("data", url);
+    }   
 
     //------- Send email --------
     //function submitContactForm() {
