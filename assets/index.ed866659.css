@@ -430,7 +430,7 @@ button.swiper-pagination-bullet {
   .carousel-slider {
     --carousel-slider-max-width: 100%;
     --carousel-slider-width: 50%;
-    --carousel-slider-height: 800px;
+    --carousel-slider-height: 75%;
     --carousel-slider-navigation-color: #fff;
     --carousel-slider-pagination-color: #000;
   }
@@ -458,6 +458,9 @@ button.swiper-pagination-bullet {
   }
 }
 
+.carousel-slider:hover{
+  cursor: pointer;
+}
 
 .carousel-slider .swiper-slide {
   border-radius: 8px;
