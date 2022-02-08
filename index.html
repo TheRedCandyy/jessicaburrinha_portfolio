@@ -8,14 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="navigation.js"></script>
-    <script type="module" crossorigin src="./assets/index.b1995cd6.js"></script>
     <link rel="modulepreload" href="./assets/vendor.50b6404e.js">
     <link rel="stylesheet" href="./assets/index.ed866659.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Jéssica Burrinha</title>
+    <!--Import the multi-language.js-->
+    <script src="multi-language.js"></script>
     <script>
         setTimeout(function() {
             $('#loading_screen').removeClass('d-flex');
@@ -23,6 +21,18 @@
             $('#home').removeClass('d-none');
             $('#home').addClass('d-block');
         }, 2000);
+    </script>
+    <script id="translation-sheet" type="application/json">
+        [
+            {
+                "id":"aboutme-text",
+                "langs":{
+                    "en":"Barreiro, 1993. Jessica Burrinha was born in Portugal and studies in Lisbon. In 2016, he completed his Degree in Sculpture at the Faculty of Fine Arts of the University of Lisbon; In 2020, he completed his Masters in Sculpture at the same Faculty. In 2014, he attended the Professional Training course of Workshops on Faience series at CENCAL (Professional Training Center for the Ceramic Industry), in Caldas da Rainha, and in 2017 he attended the Professional Training Center for the Metallurgical and Metalworking Industry of Lisbon , in the theme, General metalwork - welding and oxyfuel, CENFIM, Lisbon. He started exhibiting in 2015, already has collective exhibitions in different Portugal and Spain on his resume, participated in 2018 in Art Madrid'18, Contemporary Art Fair, at Galeria Arte Perérica, at CCB, exhibited on its twenty-fifth anniversary, in Lisbon. In 2020, he participated in the exhibition “Creative (Un) makings: Disruptions in art/archaeology, “Ineligible”, at the International Museum of Contemporary Sculpture, Santo Tirso and at the XXI Cerveira International Art Biennial, Vila Nova de Cerveira. Already four Honorable Mentions, one in the Mertolarte Contest, 2016, another two in Salvaterra de Magos, in the Infante D. Luís Award for Arts 2017 and 2019 and received at the 4th International Biennial of Gaia Art 2021. A second prize in the Mertolaarte Contest 2018, in Mértola. Inspired, Jéssica Burrinha, in nature worked with different materials such as wood, clay, plaster, cement and earth metal. In 2018, he started to investigate the potential of raw and compact earth, after attending a compressed earth workshop, within the scope of the European LearnBION project, given by the architect Tânia Teixeira at the Faculty of Fine Arts, in Lisbon. Currently, he is deeply connected to the earth between compacted materials, always seeking simplicity and purity. The beauty of his work lies in the continuation of the change in his sculptures, which degrade and regenerate, considering them as “living sculptures”.",
+                    "pt":"Barreiro, 1993. Jéssica Burrinha nasceu em Portugal e estuda em Lisboa. Concluiu em 2016 a Licenciatura em Escultura, na Faculdade de Belas-Artes da Universidade de Lisboa; Finalizou em 2020 o Mestrado em Escultura na mesma Faculdade. Em 2014, frequentou o curso de Formação Profissional de Workshops sobre séries em Faiança no CENCAL (Centro de Formação Profissional para a Indústria da Cerâmica), nas Caldas da Rainha, e em 2017 frequentou o Centro de Formação Profissional da Indústria Metalúrgica e Metalomecânica de Lisboa, na temática, Serralharia geral- soldadura e oxicorte, CENFIM, Lisboa. Começou a expor em 2015, já conta no seu currículo com diversas exposições coletivas em diferentes regiões de Portugal e Espanha, participou em 2018 na Art Madrid’18, Feira de Arte Contemporânea, através da Galeria Arte Periférica, no CCB, onde expôs no vigésimo quinto aniversário da mesma, em Lisboa. Em 2020, participou na exposição “Creative (Un) makings: Disruptions in art/archaeology, “Ineligible”, no Museu Internacional de Escultura Contemporânea, Santo Tirso e na XXI Bienal Internacional de Arte de Cerveira, Vila Nova de Cerveira. Já recebeu quatro Menções Honrosas, uma no Concurso Mertolarte, 2016, outras duas em Salvaterra de Magos, no Prémio Infante D. Luís às Artes 2017 e 2019 e na 4ª Bienal Internacional de Arte Gaia 2021. Um segundo prêmio do Concurso Mertolaarte 2018, em Mértola. Inspirada na Natureza, Jéssica Burrinha trabalhou com diversos materiais tais como, madeira, barro, metal, gesso, cimento e terra. Em 2018, começou a investigar a potencialidade da terra crua e compactada, após ter frequentado um workshop de terra comprimida, no âmbito do projeto europeu LearnBION, dado pela arquiteta Tânia Teixeira na Faculdade de Belas Artes, em Lisboa. Atualmente, está profundamente envolvida na interação entre o espaço e a terra compactada, procurando destacar sempre, a simplicidade e a pureza dos materiais essenciais. A beleza do seu trabalho reside na continua mudança das suas esculturas, que se degradam e regeneram, considerando-as como “esculturas vivas”."
+                }
+            }
+    
+        ]
     </script>
 </head>
 <body>
@@ -40,12 +50,22 @@
     <div id="home" class="vh-100 d-none">
         <div class="landing_page_background">
             <div class="container vh-100">
-              <div class="row vh-100 align-items-center">
-                <div class="col-12 text-center text-light">
-                    <img src="./img/logo_white.png" alt="Logo">
-                    <h1 class="display-1"><span class='fw-extra-light px-md-3'>Jéssica Burrinha</span></h1>
+                <div class="row vh-100">
+                    <select id="languages" class="form-select w-auto float-end mt-3 ms-3 align-self-start">
+                        <!-- The value is the language code! -->
+                        <option value="pt">
+                            Portuguese (Default)
+                        </option>
+                        <option value="en">
+                            English
+                        </option>
+                    </select>
+                    <div class="col-12 text-center text-light">
+                        <div class="clearfix"></div>
+                        <img src="./img/logo_white.png" alt="Logo">
+                        <h1 class="display-1"><span class='fw-extra-light px-md-3'>Jéssica Burrinha</span></h1>
+                    </div>
                 </div>
-              </div>
             </div>
             <a href="#aboutme"><div class="scroller" id="scroller" onclick="goto('aboutme', 'home')">
                 <section class="bg-white">
@@ -127,31 +147,10 @@
                         <div class="col-lg-5 col-12 mt-3">
                             <img class="img-fluid" src="./img/aboutme.jpg" alt="Me">
                         </div>
-                        <div class="col-lg-7 col-12 align-self-center mt-md-0 mt-5">
+                        <div class="col-lg-7 col-12 align-self-center mt-lg-0 mt-5">
                             <h2>About Me</h2>
                             <hr>
-                            <p>Barreiro,  1993.  Jéssica  Burrinha  nasceu  em  Portugal  e  estuda  em  Lisboa.  Concluiu  em  2016  a 
-                                Licenciatura em Escultura, na Faculdade de Belas-Artes da Universidade de Lisboa; Finalizou em 2020 
-                                o Mestrado em Escultura na mesma Faculdade. Em 2014, frequentou o curso de Formação Profissional 
-                                de Workshops sobre séries em Faiança no CENCAL (Centro de Formação Profissional para a Indústria 
-                                da  Cerâmica),  nas  Caldas  da  Rainha,  e  em  2017  frequentou  o  Centro  de  Formação  Profissional  da 
-                                Indústria  Metalúrgica  e  Metalomecânica  de  Lisboa,  na  temática,  Serralharia  geral-  soldadura  e 
-                                oxicorte,  CENFIM,  Lisboa.  Começou  a  expor  em  2015,  já  conta  no  seu  currículo  com  diversas 
-                                exposições  coletivas  em  diferentes  regiões  de  Portugal  e  Espanha,  participou  em  2018  na  Art 
-                                Madrid’18, Feira de Arte Contemporânea, através da Galeria Arte Periférica, no CCB, onde expôs no 
-                                vigésimo quinto aniversário da mesma, em Lisboa. Em 2020, participou na exposição  “Creative (Un) 
-                                makings:  Disruptions  in  art/archaeology,  “Ineligible”, no Museu Internacional de Escultura 
-                                Contemporânea, Santo Tirso e na XXI Bienal Internacional de Arte de Cerveira, Vila Nova de Cerveira. 
-                                Já recebeu quatro Menções Honrosas, uma no Concurso Mertolarte, 2016, outras duas em Salvaterra 
-                                de Magos, no Prémio Infante D. Luís às Artes 2017 e 2019 e na 4ª Bienal Internacional de Arte Gaia 
-                                2021. Um segundo prêmio do Concurso Mertolaarte 2018, em Mértola. Inspirada na Natureza, Jéssica 
-                                Burrinha trabalhou com diversos materiais tais como, madeira, barro, metal, gesso, cimento e terra. 
-                                Em 2018, começou a investigar a potencialidade da  terra crua e compactada, após ter frequentado 
-                                um workshop de terra comprimida, no âmbito do projeto europeu LearnBION, dado pela arquiteta 
-                                Tânia Teixeira na Faculdade de Belas Artes, em Lisboa. Atualmente, está profundamente envolvida na 
-                                interação  entre  o  espaço  e  a  terra  compactada,  procurando  destacar  sempre,  a  simplicidade  e  a 
-                                pureza  dos  materiais  essenciais.  A  beleza  do  seu  trabalho  reside  na  continua  mudança  das  suas 
-                                esculturas, que se degradam e regeneram, considerando-as como “esculturas vivas”.</p>
+                            <p id="aboutme-text">Text text text</p>
                         </div>
                     </div>
                 </div>
@@ -329,7 +328,7 @@
                     <div id="cinetica" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Cinética</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="cineticaCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#cineticaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -388,7 +387,7 @@
                     <div id="decadencia" class="vh-100 d-none overflow-y mb-2">
                         <h1 class="text-center pt-2 mb-5">Decadência</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="decadenciaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#decadenciaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -431,7 +430,7 @@
                     <div id="despojamento" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Despojamento</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="despojamentoCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#despojamentoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -484,7 +483,7 @@
                     <div id="in_materiae_veritas" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">In Materiae Veritas</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="in_materiae_veritasCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#in_materiae_veritasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -549,7 +548,7 @@
                     <div id="missao_cumprida" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Missão Cumprida</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="missao_cumpridaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#missao_cumpridaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -599,7 +598,7 @@
                     <div id="recomeco" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Recomeço</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="recomecoCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#recomecoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -640,7 +639,7 @@
                     <div id="sopro_de_vida" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Sopro de vida</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="sopro_de_vidaCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#sopro_de_vidaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -687,7 +686,7 @@
                     <div id="tao_longe" class="vh-100 d-none overflow-y">
                         <h1 class="text-center pt-2 mb-5">Tão Longe</h1>
                         <div class="row justify-content-center">
-                            <div class="col-xxl-6 col-xl-7 col-md-10">
+                            <div class="col-xxl-6 col-xl-7 col-md-10 ms-2">
                                 <div id="tao_longeCarousel" class="carousel slide w-100 mb-5" data-bs-ride="carousel" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#tao_longeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -943,9 +942,8 @@
                         <div class="col">
                             <h3 class="mb-2">Contacts</h3>
                             <div class="social">
-                                <p></p><i class="fab fa-twitter rounded-circle"></i><a href="https://www.twitter.com">my_twitter</a>
-                                <p></p><i class="fab fa-instagram rounded-circle"></i><a href="https://www.instagram.com">my_instagram</a>
-                                <p></p><i class="fab fa-facebook-square rounded-circle"></i><a href="https://www.facebook.com">my_facebook</a>
+                                <p></p><i class="fab fa-instagram rounded-circle"></i><a href="https://www.instagram.com/je.burrinha/">@je.burrinha</a>
+                                <p></p><i class="fab fa-facebook-square rounded-circle"></i><a href="https://www.facebook.com/JessicaBurrinhaSculpture/">Jéssica Burrinha Sculture</a>
                             </div>
                         </div>
                     </div>
@@ -975,6 +973,10 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="navigation.js"></script>
+<script type="module" crossorigin src="./assets/index.b1995cd6.js"></script>
 <script>
     const email_tooltip = document.getElementById('email_tooltip');
 
@@ -983,75 +985,19 @@
     function to_preview(url){
         $("#pdf_viewer").prop("data", url);
     }   
+</script>
+<script>
+    // Activation: construct an instance of multi-language
+    // construct translator instance
+    var translator = new MultiLanguage();
 
-    //------- Send email --------
-    //function submitContactForm() {
-        /*var name = $('#form_name').val();
-        var email = $('#form_email').val();
-        var phone = $('#form_phone').val();
-        var message =$('#form_message').val();*/
+    // register select(s)
+    translator.registerSelect(document.getElementById("languages"));
 
-        //this is the html template. You can also do it as used above. But is much simpler done as below
-        /*
-        var htmlMessage = 'Contact form<br/>' +
-        'Name: '+$('#form_subject').val()+'<br/>'+
-        'EMail: '+$('#form_email').val()+'<br/>'+
-        'Message:<br/>'+
-        $('#form_message').val();
+    // get the JSON translation sheet. Note you MUST call JSON.parse(text) if you are giving a text.
+    var json = JSON.parse(document.getElementById("translation-sheet").innerHTML);
 
-        //submit the form using ajax
-        $.ajax({
-        type: "POST",
-        url: "https://mandrillapp.com/api/1.0/messages/send",
-        data: {
-        "key": f64006ed1fe7116ba304b514eed473dd-us14,
-        "message": {
-            "from_email": 'alexandre.tavares@bnt.pt',
-            "to": [
-            {
-                "email": 'alexandre.tavares@bnt.pt',
-                "name": 'Alexandre Tavares',
-                "type": 'to'
-            }
-            ],
-            "subject": $('#form_subject').val(),
-            "html": htmlMessage
-        }
-        },
-        success: function(response){
-            alert(response);
-        },
-        error: function(response){
-            alert(response);
-        }
-        });
-
-        return false;
-    }
-    /*
-    function send_email(){
-        var email = document.getElementById("form_email").value;
-        var subject = document.getElementById("form_subject").value;
-        var message = document.getElementById("form_message").innerHTML;
-
-        var mandrill = require('node-mandrill')('f64006ed1fe7116ba304b514eed473dd-us14');
-    
-        
-        mandrill('/messages/send', {
-            message: {
-                to: [{email: 'alexandre.tavares@bnt.pt', name: 'Alexandre Tavares'}],
-                from_email: email,
-                subject: subject,
-                text: message
-            }
-        }, function(error, response)
-        {
-            //uh oh, there was an error
-            if (error) console.log( JSON.stringify(error) );
-    
-            //everything's good, lets see what mandrill said
-            else console.log(response);
-        });
-    }*/
+    // load the translation sheet
+    translator.addSheet(json);
 </script>
 </html>
