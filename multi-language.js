@@ -91,7 +91,6 @@ class MultiLanguage
             //if the element exists on the page
             if (ele !== null)
             {
-
                 //get the desired language for the element inner text
                 var eleJSONLang = eleJSON["langs"];
                 //make sure the langs object for this element exists, if not ,this element does not have innerhtml
