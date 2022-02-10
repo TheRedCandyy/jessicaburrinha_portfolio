@@ -150,3 +150,11 @@ i{
 .fs-6{
     font-size: 0.75em !important;
 }
+
+.carousel img{
+    aspect-ratio: 16 / 10;
+}
+
+.carousel-slider img{
+    aspect-ratio: 4 / 3;
+}

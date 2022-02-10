@@ -171,6 +171,20 @@ function goto(whereto, from, mobile) {
                 behavior: 'smooth' 
             });
             break;
+        case 'identidade':
+            document.getElementById("identidade").classList.remove("d-none");
+            document.getElementById("identidade").classList.add("d-block");
+            document.getElementById("identidade").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            break;
+        case 'naturalis_optio':
+            document.getElementById("naturalis_optio").classList.remove("d-none");
+            document.getElementById("naturalis_optio").classList.add("d-block");
+            document.getElementById("naturalis_optio").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            break;
         default:
             break;
     }
