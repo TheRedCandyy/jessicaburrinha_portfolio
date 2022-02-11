@@ -98,7 +98,7 @@ body{
 }
 
 /* Changes to bootstrap */
-.active{
+.nav-item .active{
     border-bottom: 2px solid #000;
 }
 

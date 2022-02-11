@@ -185,6 +185,27 @@ function goto(whereto, from, mobile) {
                 behavior: 'smooth' 
             });
             break;
+        case 'regenerar':
+            document.getElementById("regenerar").classList.remove("d-none");
+            document.getElementById("regenerar").classList.add("d-block");
+            document.getElementById("regenerar").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            break;
+        case 'sufoco_1':
+            document.getElementById("sufoco_1").classList.remove("d-none");
+            document.getElementById("sufoco_1").classList.add("d-block");
+            document.getElementById("sufoco_1").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            break;
+        case 'sufoco_2':
+            document.getElementById("sufoco_2").classList.remove("d-none");
+            document.getElementById("sufoco_2").classList.add("d-block");
+            document.getElementById("sufoco_2").scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            break;
         default:
             break;
     }
