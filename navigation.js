@@ -106,6 +106,16 @@ function goto(whereto, from, mobile) {
                 document.getElementById("tao_longe").classList.add("d-none");
                 document.getElementById("terra_feita_de_tempo").classList.remove("d-block");
                 document.getElementById("terra_feita_de_tempo").classList.add("d-none");
+                document.getElementById("identidade").classList.remove("d-block");
+                document.getElementById("identidade").classList.add("d-none");
+                document.getElementById("naturalis_optio").classList.remove("d-block");
+                document.getElementById("naturalis_optio").classList.add("d-none");
+                document.getElementById("regenerar").classList.remove("d-block");
+                document.getElementById("regenerar").classList.add("d-none");
+                document.getElementById("sufoco_1").classList.remove("d-block");
+                document.getElementById("sufoco_1").classList.add("d-none");
+                document.getElementById("sufoco_2").classList.remove("d-block");
+                document.getElementById("sufoco_2").classList.add("d-none");
             }, 800);
             break;
         case 'cinetica':
