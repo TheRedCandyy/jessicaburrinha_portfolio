@@ -35,9 +35,10 @@ body{
 /* General icon style */
 .scroll__icon {
     position: absolute;
-    height: 3em;
-    width: 1.5em;
-    border: .25em solid rgb(255, 255, 255);
+    height: 4em;
+    width: 2em;
+    right:49%;
+    /*border: .25em solid rgb(255, 255, 255);*/
     border-radius: 1em;
 }
   
@@ -45,23 +46,27 @@ body{
     display: block;
     position: absolute;
     left: 50%;
-    background: rgb(255, 255, 255);
-    height: .5em;
-    width: .5em;
-    top: .6em;
-    margin-left: -.25em;
+    top: .4em;
+    height: .8em;
+    width: .8em;
+    margin-left: -.42em;
     border-radius: 50%;
     transform-origin: top center;
     backface-visibility: hidden;
     animation: scroll_2 2s ease-out infinite;
+    color:white;
+    line-height: .5;
 }
-  
+
+.scroll-icon__dot i{
+    font-size: 1rem;
+}
+
 .scroller{
     position: fixed;
     width: 100%;
-    display: flex;
     justify-content: center; 
-    bottom: 55px; 
+    bottom:70px; 
     z-index: 2;
 }
 
@@ -72,8 +77,8 @@ body{
 @keyframes scroll_2 {
     0%   { transform: translateY(0); opacity: 1; }
     25%  { opacity: 1; }
-    75%  { transform: translateY(.75em); opacity: 0; }
-    100% { transform: translateY(0); opacity: 0; }
+    75%  { transform: translateY(.75em); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 @media (max-width: 767px) { 
@@ -182,3 +187,48 @@ i{
         text-align: center;
     }
 }
+
+.swiper-slide{
+    filter: grayscale(0.5) !important;
+}
+
+.swiper-slide-active{
+    filter: grayscale(0.3) !important;
+}
+
+.swiper-slide-active:hover{
+    filter: grayscale(0) !important;
+}
+
+h6 i {
+    font-size: .8rem;
+}
+
+.center-slide-content{
+    margin-top: 30vh;
+}
+
+.carousel-slider .slide-content-hover{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    display: none;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+    border-radius: 0 0 8px 8px;
+}
+
+/*
+position: absolute;
+left: 0;
+width: 100%;
+bottom: 0;
+padding: 88px 16px 24px;
+box-sizing: border-box;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+border-radius: 0 0 8px 8px;
+*/
