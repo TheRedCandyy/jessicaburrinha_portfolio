@@ -31,11 +31,11 @@ function goto(whereto, from, mobile) {
         case 'home':
             document.getElementById(from).classList.add("animate__animated", "animate__backOutDown");
             home.classList.add("animate__animated", "animate__backInDown");
-            document.getElementById("scroller").style.display = "flex";
             setTimeout(() => {  
                 horizontal.classList.remove("d-flex");
                 horizontal.classList.add("d-none");
-            }, 1000);
+                document.getElementById("scroller").style.display = "flex";
+            }, 800);
             
             break;
         case 'aboutme':
