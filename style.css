@@ -222,6 +222,19 @@ h6 i {
     border-radius: 0 0 8px 8px;
 }
 
+.carousel-slider .slide-content-mobile{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    display: block;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
+}
+
 /*
 position: absolute;
 left: 0;
