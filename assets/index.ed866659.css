@@ -429,7 +429,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 991.98px) {
   .carousel-slider {
     --carousel-slider-max-width: 100%;
-    --carousel-slider-width: 50%;
+    --carousel-slider-width: 75%;
     --carousel-slider-height: 75%;
     --carousel-slider-navigation-color: #fff;
     --carousel-slider-pagination-color: #000;
@@ -450,8 +450,8 @@ button.swiper-pagination-bullet {
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
   .carousel-slider {
-    --carousel-slider-max-width: 575px;
-    --carousel-slider-width: 300px;
+    --carousel-slider-max-width: 100%;
+    --carousel-slider-width: 75%;
     --carousel-slider-height: 500px;
     --carousel-slider-navigation-color: #fff;
     --carousel-slider-pagination-color: #000;
