@@ -188,18 +188,6 @@ i{
     }
 }
 
-.swiper-slide{
-    filter: grayscale(0.5) !important;
-}
-
-.swiper-slide-active{
-    filter: grayscale(0.3) !important;
-}
-
-.swiper-slide-active:hover{
-    filter: grayscale(0) !important;
-}
-
 h6 i {
     font-size: .8rem;
 }

@@ -37,7 +37,7 @@ import { S as e, A as t, N as r, P as o } from "./vendor.50b6404e.js";
     grabCursor: !0,
     watchSlidesProgress: !0,
     loop: !0,
-    loopedSlides: 9,
+    loopedSlides: 14,
     slidesPerView: "auto",
     centeredSlides: !0,
     navigation: {
