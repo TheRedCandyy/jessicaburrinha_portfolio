@@ -371,14 +371,6 @@ button.swiper-pagination-bullet {
 .swiper-button-lock {
   display: none;
 }
-/*
-:root {
-  --carousel-slider-max-width: 1200px;
-  --carousel-slider-width: 600px;
-  --carousel-slider-height: 700px;
-  --carousel-slider-navigation-color: #fff;
-  --carousel-slider-pagination-color: #000;
-}*/
 .carousel-slider {
   --swiper-navigation-color: var(--carousel-slider-navigation-color);
   --swiper-pagination-color: var(--carousel-slider-pagination-color);
