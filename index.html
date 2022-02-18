@@ -919,6 +919,15 @@
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"></a>
+                            <select id="languages-5" class="form-select w-auto me-auto">
+                                <!-- The value is the language code! -->
+                                <option value="pt">
+                                    Portuguese
+                                </option>
+                                <option value="en">
+                                    English
+                                </option>
+                            </select>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -1015,6 +1024,15 @@
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"></a>
+                            <select id="languages-6" class="form-select w-auto me-auto">
+                                <!-- The value is the language code! -->
+                                <option value="pt">
+                                    Portuguese
+                                </option>
+                                <option value="en">
+                                    English
+                                </option>
+                            </select>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -2450,6 +2468,15 @@
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"></a>
+                            <select id="languages-7" class="form-select w-auto me-auto">
+                                <!-- The value is the language code! -->
+                                <option value="pt">
+                                    Portuguese
+                                </option>
+                                <option value="en">
+                                    English
+                                </option>
+                            </select>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -2557,6 +2584,15 @@
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"></a>
+                            <select id="languages-8" class="form-select w-auto me-auto">
+                                <!-- The value is the language code! -->
+                                <option value="pt">
+                                    Portuguese
+                                </option>
+                                <option value="en">
+                                    English
+                                </option>
+                            </select>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -2644,6 +2680,10 @@
     translator.registerSelect(document.getElementById("languages-2"));
     translator.registerSelect(document.getElementById("languages-3"));
     translator.registerSelect(document.getElementById("languages-4"));
+    translator.registerSelect(document.getElementById("languages-5"));
+    translator.registerSelect(document.getElementById("languages-6"));
+    translator.registerSelect(document.getElementById("languages-7"));
+    translator.registerSelect(document.getElementById("languages-8"));
 
     // get the JSON translation sheet. Note you MUST call JSON.parse(text) if you are giving a text.
     var json = JSON.parse(document.getElementById("translation-sheet").innerHTML);
