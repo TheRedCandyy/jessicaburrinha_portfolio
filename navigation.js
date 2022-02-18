@@ -10,6 +10,42 @@ function removeanimates() {
     $(".animate__backOutRight").removeClass("animate__backOutRight");
 }
 
+function reset_portfolio(){
+    document.getElementById("portfolio").scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+    setTimeout(function (){
+        document.getElementById("cinetica").classList.remove("d-block");
+        document.getElementById("cinetica").classList.add("d-none");
+        document.getElementById("decadencia").classList.remove("d-block");
+        document.getElementById("decadencia").classList.add("d-none");
+        document.getElementById("despojamento").classList.remove("d-block");
+        document.getElementById("despojamento").classList.add("d-none");
+        document.getElementById("in_materiae_veritas").classList.remove("d-block");
+        document.getElementById("in_materiae_veritas").classList.add("d-none");
+        document.getElementById("missao_cumprida").classList.remove("d-block");
+        document.getElementById("missao_cumprida").classList.add("d-none");
+        document.getElementById("recomeco").classList.remove("d-block");
+        document.getElementById("recomeco").classList.add("d-none");
+        document.getElementById("sopro_de_vida").classList.remove("d-block");
+        document.getElementById("sopro_de_vida").classList.add("d-none");
+        document.getElementById("tao_longe").classList.remove("d-block");
+        document.getElementById("tao_longe").classList.add("d-none");
+        document.getElementById("terra_feita_de_tempo").classList.remove("d-block");
+        document.getElementById("terra_feita_de_tempo").classList.add("d-none");
+        document.getElementById("identidade").classList.remove("d-block");
+        document.getElementById("identidade").classList.add("d-none");
+        document.getElementById("naturalis_optio").classList.remove("d-block");
+        document.getElementById("naturalis_optio").classList.add("d-none");
+        document.getElementById("regenerar").classList.remove("d-block");
+        document.getElementById("regenerar").classList.add("d-none");
+        document.getElementById("sufoco_1").classList.remove("d-block");
+        document.getElementById("sufoco_1").classList.add("d-none");
+        document.getElementById("sufoco_2").classList.remove("d-block");
+        document.getElementById("sufoco_2").classList.add("d-none");
+    }, 800);
+}
+
 function goto(whereto, from, mobile) {
     removeanimates();
     var contacts = document.getElementById("contacts");
@@ -84,39 +120,7 @@ function goto(whereto, from, mobile) {
             }
             break;
         case 'portfolio_reset':
-            document.getElementById("portfolio").scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-            setTimeout(function (){
-                document.getElementById("cinetica").classList.remove("d-block");
-                document.getElementById("cinetica").classList.add("d-none");
-                document.getElementById("decadencia").classList.remove("d-block");
-                document.getElementById("decadencia").classList.add("d-none");
-                document.getElementById("despojamento").classList.remove("d-block");
-                document.getElementById("despojamento").classList.add("d-none");
-                document.getElementById("in_materiae_veritas").classList.remove("d-block");
-                document.getElementById("in_materiae_veritas").classList.add("d-none");
-                document.getElementById("missao_cumprida").classList.remove("d-block");
-                document.getElementById("missao_cumprida").classList.add("d-none");
-                document.getElementById("recomeco").classList.remove("d-block");
-                document.getElementById("recomeco").classList.add("d-none");
-                document.getElementById("sopro_de_vida").classList.remove("d-block");
-                document.getElementById("sopro_de_vida").classList.add("d-none");
-                document.getElementById("tao_longe").classList.remove("d-block");
-                document.getElementById("tao_longe").classList.add("d-none");
-                document.getElementById("terra_feita_de_tempo").classList.remove("d-block");
-                document.getElementById("terra_feita_de_tempo").classList.add("d-none");
-                document.getElementById("identidade").classList.remove("d-block");
-                document.getElementById("identidade").classList.add("d-none");
-                document.getElementById("naturalis_optio").classList.remove("d-block");
-                document.getElementById("naturalis_optio").classList.add("d-none");
-                document.getElementById("regenerar").classList.remove("d-block");
-                document.getElementById("regenerar").classList.add("d-none");
-                document.getElementById("sufoco_1").classList.remove("d-block");
-                document.getElementById("sufoco_1").classList.add("d-none");
-                document.getElementById("sufoco_2").classList.remove("d-block");
-                document.getElementById("sufoco_2").classList.add("d-none");
-            }, 800);
+            reset_portfolio();
             break;
         case 'cinetica':
             document.getElementById("cinetica").classList.remove("d-none");
