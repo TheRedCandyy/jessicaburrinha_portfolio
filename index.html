@@ -13,15 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="description" content="Jéssica Burrinha Portfolio, Artist from Portugal."/>
     <link rel="icon" href="./img/logo_with_background.webp">
-    <script type="module" crossorigin src="assets/index.533c5504.js"></script>
-    <link rel="modulepreload" href="assets/vendor.d82aaa9c.js">
-    <link rel="stylesheet" href="assets/index.2aaa860d.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Jéssica Burrinha</title>
-    <!--Import the multi-language.js-->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
     <script src="multi-language.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -959,7 +957,7 @@
     </script>
 </head>
 <body>
-    <div id="loading_screen" class="d-flex justify-content-center align-items-center bg-dark vh-100 z-50">
+    <div id="loading_screen" class="d-none justify-content-center align-items-center bg-dark vh-100 z-50">
         <div class="spinner-grow text-light" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
@@ -970,7 +968,7 @@
           <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <div id="home" class="vh-100 d-none">
+    <div id="home" class="vh-100 d-block">
         <div class="landing_page_background">
             <div class="container vh-100">
                 <div class="row vh-100">
@@ -982,12 +980,7 @@
             </div>
             <a href="#aboutme">
                 <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                <!--<section class="bg-white">
-                    <span class="scroll__icon">
-                    <span class="scroll-icon__dot"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-down"></i></span>
-                    </span>
-                </section>-->
-                <div class="pulsating-circle-white"></div>
+                    <div class="pulsating-circle-white d-block"></div>
                 </div>
             </a>
         </div>
@@ -995,11 +988,11 @@
     <div id="scroll-horizontal" class="d-none" style="width:400%">
         <!-- ABOUT ME -->
         <div id="aboutme" class="d-block vw-100 overflow-scroll position-relative">
-            <div class="container-fluid vh-100">
+            <div class="container-fluid vh-100 p-0">
                 <div class="desktop-only">
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"><span>Jéssica Burrinha</span></a>
                             <select id="languages-1" class="form-select w-auto me-auto">
                                 <!-- The value is the language code! -->
                                 <option value="pt">
@@ -1104,7 +1097,7 @@
                 <div class="desktop-only">
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"><span>Jéssica Burrinha</span></a>
                             <select id="languages-2" class="form-select w-auto me-auto">
                                 <!-- The value is the language code! -->
                                 <option value="pt">
@@ -1182,505 +1175,304 @@
                     </nav>
                 </div>
                 <div class="container-fluid p-0">
-                    <div class="d-flex align-items-center vh-100">
-                        <div class="carousel-slider" style="margin-top: -10vh">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                    <div class="d-flex align-items-center w-md-75 vh-100 mx-auto">
+                        <div class="carousel desktop-only splide w-100" style="margin-top: -5vh">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
                                         <a href="#naturalis_optio" onclick="goto('naturalis_optio')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/naturalis_optio/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="naturalis-optio-main-carousel">Naturalis Optio</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="naturalis-optio-main-carousel-1">Naturalis Optio</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/naturalis_optio/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="naturalis-optio-main-carousel-mobile">Naturalis Optio</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img id="img_example" src="./img/naturalis_optio/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Naturalis Optio</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('naturalis_optio')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#regenerar" onclick="goto('regenerar')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/regenerar/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="regenerar-main-carousel">Regenerar</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="regenerar-main-carousel-1">Regenerar</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                    <img src="./img/regenerar/cover.webp" alt="">
-                                                    <div class="slide-content-mobile">
-                                                        <div class="center-slide-content">
-                                                            <h2 class="text-white" id="regenerar-main-carousel-mobile">Regenerar</h2>
-                                                            <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                                <div class="pulsating-circle-white"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                            <img src="./img/regenerar/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Regenerar</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#sufoco_1" onclick="goto('sufoco_1')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sufoco_1/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="sufoco1-main-carousel">Sufoco I</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sufoco1-main-carousel-1">Sufoco I</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sufoco_1/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sufoco1-main-carousel-mobile">Sufoco I</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/sufoco_1/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Sufoco I</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#sufoco_2" onclick="goto('sufoco_2')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sufoco_2/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="sufoco2-main-carousel">Sufoco II</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sufoco2-main-carousel-1">Sufoco II</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sufoco_2/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sufoco2-main-carousel-mobile">Sufoco II</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/sufoco_2/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Sufoco II</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#cinetica" onclick="goto('cinetica')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/cinetica/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="cinetica-main-carousel">Cinética</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="cinetica-main-carousel-1">Cinética</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/cinetica/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="cinetica-main-carousel-mobile">Cinética</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/cinetica/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Cinética</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#decadencia" onclick="goto('decadencia')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/decadencia/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="decadencia-main-carousel">Decadência</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="decadencia-main-carousel-1">Decadência</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/decadencia/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="decadencia-main-carousel-mobile">Decadência</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#tao_longe" onclick="goto('tao_longe')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/tao_longe/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="tao-longe-main-carousel">Tão Longe</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="tao-longe-main-carousel-1">Tão Longe</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/tao_longe/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="tao-longe-main-carousel-mobile">Tão Longe</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/tao_longe/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Tão Longe</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#terra_feita_de_tempo" onclick="goto('terra_feita_de_tempo')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/terra_feita_de_tempo/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="terra-feita-de-tempo-main-carousel">Terra feita de tempo</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="terra-feita-de-tempo-main-carousel-1">Terra feita de tempo</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/terra_feita_de_tempo/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="terra-feita-de-tempo-main-carousel-mobile">Terra feita de tempo</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/terra_feita_de_tempo/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Terra Feita de Tempo</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#despojamento" onclick="goto('despojamento')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/despojamento/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="despojamento-main-carousel">Despojamento</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                        <h2 class="text-white" id="despojamento-main-carousel-1">Despojamento</h2>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/despojamento/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="despojamento-main-carousel-mobile">Despojamento</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/despojamento/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Despojamento</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#in_materiae_veritas" onclick="goto('in_materiae_veritas')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/in_materiae_veritas/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="in-materiae-veritas-main-carousel">In Materiae Veritas</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="in-materiae-veritas-main-carousel-1">In Materiae Veritas</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/in_materiae_veritas/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="in-materiae-veritas-main-carousel-mobile">In Materiae Veritas</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/in_materiae_veritas/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>In Materiae Veritas</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#missao_cumprida" onclick="goto('missao_cumprida')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/missao_cumprida/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="missao-cumprida-main-carousel">Missão Cumprida</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="missao-cumprida-main-carousel-1">Missão Cumprida</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/missao_cumprida/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="missao-cumprida-main-carousel-mobile">Missão Cumprida</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/missao_cumprida/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Missão Cumprida</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#identidade" onclick="goto('identidade')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/identidade/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="identidade-main-carousel">Identidade</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                        <h2 class="text-white" id="identidade-main-carousel-1">Identidade</h2>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/identidade/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="identidade-main-carousel-mobile">Identidade</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/identidade/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Identidade</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#recomeco" onclick="goto('recomeco')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/recomeco/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="recomeco-main-carousel">Recomeço</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="recomeco-main-carousel-1">Recomeço</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/recomeco/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="recomeco-main-carousel-mobile">Recomeço</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/recomeco/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Recomeço</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class="swiper-slide">
+                                    </li>
+                                    <li class="splide__slide">
                                         <a href="#sopro_de_vida" onclick="goto('sopro_de_vida')">
-                                            <div class="desktop-only">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sopro_de_vida/cover.webp" alt="">
-                                                <div class="slide-content">
-                                                    <div class="center-slide-content">
-                                                        <h2 id="sopro-de-vida-main-carousel">Sopro de Vida</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-content-hover">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sopro-de-vida-main-carousel-1">Sopro de Vida</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="mobile-only h-100">
-                                                <div class="carousel-slider-animate-opacity">
-                                                <img src="./img/sopro_de_vida/cover.webp" alt="">
-                                                <div class="slide-content-mobile">
-                                                    <div class="center-slide-content">
-                                                        <h2 class="text-white" id="sopro-de-vida-main-carousel-mobile">Sopro de Vida</h2>
-                                                        <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
-                                                            <div class="pulsating-circle-white"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <img src="./img/sopro_de_vida/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3>Sopro de Vida</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="carousel mobile-only splide-mobile w-100" style="margin-top: -10vh">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="./img/naturalis_optio/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Naturalis Optio</h3>
+                                            <a href="#naturalis_optio" onclick="goto('naturalis_optio')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('naturalis_optio')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/regenerar/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Regenerar</h3>
+                                            <a href="#regenerar" onclick="goto('regenerar')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/sufoco_1/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Sufoco I</h3>
+                                            <a href="#sufoco_1" onclick="goto('sufoco_1')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/sufoco_2/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Sufoco II</h3>
+                                            <a href="#sufoco_2" onclick="goto('sufoco_2')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/cinetica/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Cinética</h3>
+                                            <a href="#cinetica" onclick="goto('cinetica')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/tao_longe/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Tão Longe</h3>
+                                            <a href="#tao_longe" onclick="goto('tao_longe')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/terra_feita_de_tempo/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Terra Feita de Tempo</h3>
+                                            <a href="#terra_feita_de_tempo" onclick="goto('terra_feita_de_tempo')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/despojamento/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Despojamento</h3>
+                                            <a href="#despojamento" onclick="goto('despojamento')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/in_materiae_veritas/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>In Materiae Veritas</h3>
+                                            <a href="#in_materiae_veritas" onclick="goto('in_materiae_veritas')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/missao_cumprida/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Missão Cumprida</h3>
+                                            <a href="#missao_cumprida" onclick="goto('missao_cumprida')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/identidade/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Identidade</h3>
+                                            <a href="#identidade" onclick="goto('identidade')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/recomeco/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Recomeço</h3>
+                                            <a href="#recomeco" onclick="goto('recomeco')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/sopro_de_vida/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3>Sopro de Vida</h3>
+                                            <a href="#sopro_de_vida" onclick="goto('sopro_de_vida')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- Naturalis Optio 2022 -->
@@ -2544,11 +2336,11 @@
         </div>
         <!-- PDF's -->
         <div id="documents" class="d-block vw-100 overflow-scroll position-relative">
-            <div class="container-fluid vh-100">
+            <div class="container-fluid vh-100 p-0">
                 <div class="desktop-only">
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"><span>Jéssica Burrinha</span></a>
                             <select id="languages-3" class="form-select w-auto me-auto">
                                 <!-- The value is the language code! -->
                                 <option value="pt">
@@ -2660,11 +2452,11 @@
         </div>
         <!-- CONTACTS -->
         <div id="contacts" class="d-block vw-100 overflow-scroll position-relative">
-            <div class="container-fluid vh-100">
+            <div class="container-fluid vh-100 p-0">
                 <div class="desktop-only">
                     <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50">Jéssica Burrinha</a>
+                            <a class="navbar-brand" href="#home" onclick="goto('home', 'portfolio')"><img src="./img/logo_black.webp" alt="Logo" width="50" height="50"><span>Jéssica Burrinha</span></a>
                             <select id="languages-4" class="form-select w-auto me-auto">
                                 <!-- The value is the language code! -->
                                 <option value="pt">
@@ -2775,23 +2567,49 @@
         $("#pdf_viewer").prop("data", url);
     }   
 
-    $(".carousel-slider-animate-opacity").hover(
-        function() {
-            if($(this).parents('.swiper-slide-active').length){
-                $(this).children(".slide-content").addClass( "d-none" );
-                $(this).children(".slide-content-hover").addClass( "d-block" );
-                $(this).children(".slide-content").removeClass( "d-block" );
-                $(this).children(".slide-content-hover").removeClass( "d-none" );
+    $(window).bind('mousewheel', function(event) {
+        if (event.originalEvent.wheelDelta < 0) {
+            if(!window.location.hash || window.location.hash == '#home'){
+                goto('aboutme', 'home');
+                window.location.href = "#aboutme";
             }
-        }, function() {
-            $(this).children(".slide-content").removeClass( "d-none" );
-            $(this).children(".slide-content-hover").removeClass( "d-block" );
-            $(this).children(".slide-content").addClass( "d-block" );
-            $(this).children(".slide-content-hover").addClass( "d-none" );
+        }else{
+            if(window.location.hash == '#aboutme'){
+                goto('home', 'aboutme');
+                window.location.href = "#home";
+            }
         }
-    );
+        setTimeout(() => {
+        }, 800);
+    });
 </script>
 <script>
+    if($(document).width() < 768){
+        var splide = new Splide( '.splide-mobile', {
+            perPage: 1,
+            type   : 'loop',
+            direction: 'ttb',
+            height: '85vh',
+            autoHeight : true,
+            start: 0,
+            gap: '1.5em',
+            isNavigation: true,
+            focus    : 'center',
+        } );
+    }else{
+        var splide = new Splide( '.splide', {
+            type   : 'loop',
+            start: 0,
+            padding: '40vh',
+            breakpoints: {
+                1200: {
+                    padding: '5vh',
+                },
+            },
+        } );
+    }
+
+
     // Activation: construct an instance of multi-language
     // construct translator instance
     var translator = new MultiLanguage();

@@ -87,6 +87,7 @@ function goto(whereto, from, mobile) {
             document.getElementById("scroller").style.display = "none";
             break;  
         case 'portfolio':
+            splide.mount();
             if (from == "home") {
                 horizontal.classList.add("d-flex");
                 horizontal.classList.remove("d-none");
