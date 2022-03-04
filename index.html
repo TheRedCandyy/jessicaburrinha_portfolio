@@ -25,7 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="navigation.js"></script>
     <script>
-        $(document).ready(function () {
+        /*$(document).ready(function () {
             // Images loaded is zero because we're going to process a new set of images.
             var imagesLoaded = 0;
             // Total images is still the total number of <img> elements on the page.
@@ -53,7 +53,7 @@
                 $('#home').removeClass('d-none');
                 $('#home').addClass('d-block');
             }
-          });
+          });*/
     </script>
     <script id="translation-sheet" type="application/json">
         [
@@ -957,7 +957,7 @@
     </script>
 </head>
 <body>
-    <div id="loading_screen" class="d-flex justify-content-center align-items-center bg-dark vh-100 z-50">
+    <div id="loading_screen" class="d-none justify-content-center align-items-center bg-dark vh-100 z-50">
         <div class="spinner-grow text-light" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
@@ -968,7 +968,7 @@
           <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <div id="home" class="vh-100 d-none">
+    <div id="home" class="vh-100 d-block">
         <div class="landing_page_background">
             <div class="container vh-100">
                 <div class="row vh-100">
@@ -1195,7 +1195,7 @@
                                             <img src="./img/regenerar/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="regenerar-main-carousel">Regenerar</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('regenerar')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1206,7 +1206,7 @@
                                             <img src="./img/sufoco_1/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="sufoco1-main-carousel">Sufoco I</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sufoco_1')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1217,7 +1217,7 @@
                                             <img src="./img/sufoco_2/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="sufoco2-main-carousel">Sufoco II</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sufoco_2')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1228,7 +1228,18 @@
                                             <img src="./img/cinetica/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="cinetica-main-carousel">Cinética</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('cinetica')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#decadencia" onclick="goto('decadencia')">
+                                            <img src="./img/decadencia/cover.webp" class="d-block w-100" alt="...">
+                                            <div class="slide-content">
+                                                <h3 id="decadencia-main-carousel">Decadência</h3>
+                                                <div class="scroller text-center" id="scroller" onclick="goto('decadencia')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1239,7 +1250,7 @@
                                             <img src="./img/tao_longe/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="tao-longe-main-carousel">Tão Longe</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('tao_longe')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1250,7 +1261,7 @@
                                             <img src="./img/terra_feita_de_tempo/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="terra-feita-de-tempo-main-carousel">Terra Feita de Tempo</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('terra_feita_de_tempo')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1261,7 +1272,7 @@
                                             <img src="./img/despojamento/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="despojamento-main-carousel">Despojamento</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('despojamento')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1272,7 +1283,7 @@
                                             <img src="./img/in_materiae_veritas/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="in-materiae-veritas-main-carousel">In Materiae Veritas</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('in_materiae_veritas')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1283,7 +1294,7 @@
                                             <img src="./img/missao_cumprida/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="missao-cumprida-main-carousel">Missão Cumprida</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('missao_cumprida')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1294,7 +1305,7 @@
                                             <img src="./img/identidade/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="identidade-main-carousel">Identidade</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('identidade')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1305,7 +1316,7 @@
                                             <img src="./img/recomeco/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="recomeco-main-carousel">Recomeço</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('recomeco')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1316,7 +1327,7 @@
                                             <img src="./img/sopro_de_vida/cover.webp" class="d-block w-100" alt="...">
                                             <div class="slide-content">
                                                 <h3 id="sopro-de-vida-main-carousel">Sopro de Vida</h3>
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sopro_de_vida')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </div>
@@ -1344,7 +1355,7 @@
                                         <div class="slide-content">
                                             <h3 id="regenerar-main-carosel-mobile">Regenerar</h3>
                                             <a href="#regenerar" onclick="goto('regenerar')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('regenerar')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1355,7 +1366,7 @@
                                         <div class="slide-content">
                                             <h3 id="sufoco1-main-carosel-mobile">Sufoco I</h3>
                                             <a href="#sufoco_1" onclick="goto('sufoco_1')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sufoco_1')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1366,7 +1377,7 @@
                                         <div class="slide-content">
                                             <h3 id="sufoco2-main-carosel-mobile">Sufoco II</h3>
                                             <a href="#sufoco_2" onclick="goto('sufoco_2')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sufoco_2')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1377,7 +1388,18 @@
                                         <div class="slide-content">
                                             <h3 id="cinetica-main-carosel-mobile">Cinética</h3>
                                             <a href="#cinetica" onclick="goto('cinetica')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('cinetica')">
+                                                    <div class="pulsating-circle-white"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./img/decadencia/cover.png" class="d-block w-100" alt="...">
+                                        <div class="slide-content">
+                                            <h3 id="decadencia-main-carousel-mobile">Decadência</h3>
+                                            <a href="#decadencia" onclick="goto('decadencia')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('decadencia')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1388,7 +1410,7 @@
                                         <div class="slide-content">
                                             <h3 id="tao-longe-main-carosel-mobile">Tão Longe</h3>
                                             <a href="#tao_longe" onclick="goto('tao_longe')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('tao_longe')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1399,7 +1421,7 @@
                                         <div class="slide-content">
                                             <h3 id="terra-feita-de-tempo-main-carosel-mobile">Terra Feita de Tempo</h3>
                                             <a href="#terra_feita_de_tempo" onclick="goto('terra_feita_de_tempo')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('terra_feita_de_tempo')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1410,7 +1432,7 @@
                                         <div class="slide-content">
                                             <h3 id="despojamento-main-carosel-mobile">Despojamento</h3>
                                             <a href="#despojamento" onclick="goto('despojamento')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('despojamento')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1421,7 +1443,7 @@
                                         <div class="slide-content">
                                             <h3 id="in-materiae-veritas-main-carosel-mobile">In Materiae Veritas</h3>
                                             <a href="#in_materiae_veritas" onclick="goto('in_materiae_veritas')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('in_materiae_veritas')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1432,7 +1454,7 @@
                                         <div class="slide-content">
                                             <h3 id="missao-cumprida-main-carosel-mobile">Missão Cumprida</h3>
                                             <a href="#missao_cumprida" onclick="goto('missao_cumprida')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('missao_cumprida')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1443,7 +1465,7 @@
                                         <div class="slide-content">
                                             <h3 id="identidade-main-carosel-mobile">Identidade</h3>
                                             <a href="#identidade" onclick="goto('identidade')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('identidade')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1454,7 +1476,7 @@
                                         <div class="slide-content">
                                             <h3 id="recomeço-main-carosel-mobile">Recomeço</h3>
                                             <a href="#recomeco" onclick="goto('recomeco')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('recomeco')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
@@ -1465,7 +1487,7 @@
                                         <div class="slide-content">
                                             <h3 id="sopro-de-vida-main-carosel-mobile">Sopro de Vida</h3>
                                             <a href="#sopro_de_vida" onclick="goto('sopro_de_vida')">
-                                                <div class="scroller text-center" id="scroller" onclick="goto('aboutme', 'home')">
+                                                <div class="scroller text-center" id="scroller" onclick="goto('sopro_de_vida')">
                                                     <div class="pulsating-circle-white"></div>
                                                 </div>
                                             </a>
